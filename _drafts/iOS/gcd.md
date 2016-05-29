@@ -1,0 +1,41 @@
+---
+layout: post
+title: "GCD 队列"
+date: 2016-05-29 09:00:00 +0800
+categories: iOS
+---
+## GCD 队列
+Grand Central Dispatch(GCD) 是苹果公司推出的一套多核心编程解决方案，用于替代 NSThread，NSOperationQueue 等技术，高效的实现并发编程。
+
+### Queues(队列)
+GCD 提供 dispatch queues 来处理代码块，这些队列管理你提供给 GCD 任务并按照 FIFO 的顺序执行这些任务。这样就能有效的保证第一个被添加到队列里面的任务会第一个被执行，第二个添加到队列里面的任务会第二个被执行，直到完成所有任务的处理。
+
+所有的 dispatch queues 自身都是线程安全的，你可以在多个线程里面并行的访问它们。
+
+#### Serial Queue 串行队列
+串行队列中的任务在同一时间只能有一个任务处于执行状态，每一个任务都必须等到上一个任务执行完成之后才开始。
+
+#### Concurrent Queue 并行队列
+并行队列中的任务会按照它们被添加的顺序开始执行，任务可能会以任意的顺序执行完成，你不会知道何时开始执行下一个任务，或者当前有多少个任务在执行。这些都是由 GCD 决定的。
+
+### Queue Types(队列类型)
+#### 主队列
+主队列(main queue)是一个比较特殊队列，它能够保证所有被添加到该队列的任务都在主线程上执行，因此它是一个串行队列。
+
+在代码中，可以通过  dispatch\_get\_main\_queue() 来获取 main queue。
+
+#### 全局队列
+除了 main queue 以外，系统还为我们提供了几个可以并发执行的全局队列：DISPATCH\_QUEUE\_PRIORITY\_HIGH、DISPATCH\_QUEUE\_PRIORITY\_DEFAULT、DISPATCH\_QUEUE\_PRIORITY\_LOW、DISPATCH\_QUEUE\_PRIORITY\_BACKGROUND。从它们的名字可以知道，它们分别拥有不同的优先级。
+
+#### 自定义队列
+除了 GCD 提供的这些队列，开发者也可以创建自己的队列，自定义队列可以也串行队列也可以是并行队列，这完全由你自己决定。
+
+```
+dispatch_queue_create(const char *label, dispatch_queue_attr_t attr);
+```
+该函数通过第二个参数决定创建的队列是串行的还是并行的。其目前支持两个值  DISPATCH\_QUEUE\_SERIAL 和 DISPATCH\_QUEUE\_CONCURRENT。
+
+---
+参考文献：
+
+* [Grand Central Dispatch In-Depth](https://www.raywenderlich.com/60749/grand-central-dispatch-in-depth-part-1)
