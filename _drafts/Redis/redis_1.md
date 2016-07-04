@@ -1,0 +1,96 @@
+---
+layout: post
+title: "Redis 学习笔记 - 简介"
+date: 2016-07-04 14:00:00 +0800
+categories: Redis
+---
+## Redis 简介
+ Redis 是一个采用 BSD 许可开源的 Key-Value 数据库，提供较为丰富的数据结构，可以用作数据存储、缓存和消息中间件。
+
+* 持久化 - 可以将内存中的数据保存到磁盘(Snapshot、Append Only File)；
+* 丰富的数据类型 - 字符串(String)、哈希(Hash)、列表(List)、集合(Set)、有序集合(Ordered Set)；
+* 支持数据备份;
+* 集群 - Master-Slave；
+* 原子性；
+* 订阅分发 - Pub/Sub；
+* 事务；
+* LUA 脚本；
+* Key 过期支持等；
+* 动态配置 - 所有参数可用命令行动态配置不需要重启服务。
+
+## 安装
+
+从[官网](!http://redis.io/download)或者[GitHub](!https://github.com/antirez/redis)下载相应版本的源代码，自行编译即可。
+
+#### 编译
+
+```
+1、下载 http://download.redis.io/releases/redis-3.2.1.tar.gz
+2、解压后得到 redis-3.2.1 文件夹
+3、开启 Terminal, 进入 redis-3.2.1 目录
+4、依次执行下列命令：
+	make
+	make test
+	make install
+```
+
+执行上述操作之后，进入 redis-3.2.1/src 目录，即可看到编译之后的文件：
+
+* redis-server:
+* redis-cli:
+* redis-sentinel:
+* redis-check-rdb:
+* redis-check-aof:
+* redis-benchmark:
+
+至此，Redis 已经编译安装完成，可以将上述文件转移到任何你想放置的位置。
+
+#### 运行
+开启 Terminal，进入 redis-server 所在目录，执行：
+
+```
+./redis-server
+```
+
+如果服务器开启成功，即可看到如下输出：
+
+```
+# Server started, Redis version 3.2.1
+* The server is now ready to accept connections on port 6379
+```
+
+包含 Redis Server 的版本号及监听的端口号。
+
+#### 连接
+开启一个新的 Terminal, 进入 redis-cli 所在目录，执行：
+
+```
+./redis-cli
+```
+
+即可开启一个 Redis 客户端，在这个客户端，可以输入任何 Redis 指令。比如 info 指令：
+
+```
+127.0.0.1:6379> info
+```
+
+可以看到 Redis Server 相关的所有信息，至此，Redis 已经成功安装并且连接测试通过。
+
+
+#### 配置文件
+在下载的 Redis 根目录中，有一个 redis.conf 文件，该文件是 Redis 提供的配置文件样例，我们可以在运行 Redis Server 的时候通过参数指定该 Server 要读取的配置文件:
+
+```
+./bin/redis-server ./redis.conf 
+```
+
+配置文件中设定了 Redis Server 绑定地址、密码、超时时间等信息，所以我们在运行 Redis Server 的时候，一般都需要指定一个配置文件。
+
+#### 绑定IP/Port
+Redis 默认绑定的地址是 127.0.0.1:6379，如果你要修改，可以打开 redis.conf 文件，找到：
+
+```
+bind 127.0.0.1
+port 6379
+```
+
