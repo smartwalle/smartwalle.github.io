@@ -7,7 +7,7 @@ categories: MongoDB
 
 不管是对于企业、组织还是个人来讲，数据的重要性已经不需要再多作解释，尤其是处于信息技术飞速发展的今天，从数据中能够挖掘的潜力是不可限量的。所以数据安全也显得格外重要。
 
-本文将对 MongoDB 的 Replica Set 搭建方式作一下简单的介绍。
+本文将对 MongoDB 集群中的 Replica Set 搭建方式作一下简单的介绍。
 
 受环境限制，本文所涉及到的操作都在本地完成(即单机)，但是搭建 Replica Set 的操作都是一样的，笔者遇到过的坑会作特别说明。
 
@@ -142,15 +142,13 @@ rs.addArb("ip:port")
 
 虽然从服务器是可读的，但是其默认也是不可读的，需要我们自己开启。
 
-只需要在主服务器执行下列命令即可:
+只需要在从服务器执行下列命令即可:
 
 ```
-PRIMARY> db.getMongo().setSlaveOK()
+> db.getMongo().setSlaveOk()
 ```
 
-还有一种情况是，当我们直接重新启动一个原来作为从服务的服务器，然后执行操作的时候，也会遇到这个问题，这时候，并没有主服务器，可以执行：
+### 应用程序如何访问 Replica Set
 
-```
-> db.slaveOK()
-```
+参考 [Connection String URI Format](https://docs.mongodb.com/manual/reference/connection-string/).
 
