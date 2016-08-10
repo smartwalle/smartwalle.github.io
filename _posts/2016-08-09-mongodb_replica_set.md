@@ -150,5 +150,9 @@ rs.addArb("ip:port")
 
 ### 应用程序如何访问 Replica Set
 
+话说现在将 MongoDB 部署为集群了，那应用程序改动的地方大吗？这是作为一个开发者很关心的问题。
+
+这一切 MongoDB 都已经处理好了，开发者基本上无需作任何改动，只需要将连接 MongoDB 的 URL 适当的调整一下就好。
+
 参考 [Connection String URI Format](https://docs.mongodb.com/manual/reference/connection-string/).
 
