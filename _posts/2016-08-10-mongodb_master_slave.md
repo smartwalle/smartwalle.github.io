@@ -11,7 +11,7 @@ categories: MongoDB
 
 假设有两台服务器: 192.168.192.1 和 192.168.192.2。
 
-在此，我们把 192.168.192.1 作为 Master，192.168.192.2 作为 Slave。
+在此，我们把 192.168.192.1 作为 Master(主节点)，192.168.192.2 作为 Slave(从节点)。
 
 启动 Master:
 
@@ -27,9 +27,9 @@ categories: MongoDB
 ./bin/mongod --dbpath ./mydb --slave --source 192.168.192.2
 ```
 
-启动备份服务器稍微复杂一点，需要两个参数，即```--slave```和```--source```。
+启动从节点稍微复杂一点，需要两个参数，即```--slave```和```--source```。
 
---slave 用于标记以备份服务器启动。
+--slave 用于标记以从节点启动。
 --source 用于指定需要备份的服务器。
 
 至此，一个采用 Master-Slave 模式架构的 MongoDB 集群就部署完成了。
