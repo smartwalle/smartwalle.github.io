@@ -51,7 +51,7 @@ MongoDB 的分片主要包含: mongos、config server、shard 和 replica set。
 成功启动服务之后，连接上 30001 进行配置：
 
 ```
-> var config = {_id:"s1", members:[{_id:0, host:"192.168.192.105:30001"}, {_id:0, host:"192.168.192.105:30002"}, {_id:0, host:"192.168.192.105:30003", arbiterOnly: true}]}
+> var config = {_id:"s1", members:[{_id:0, host:"192.168.192.105:30001"}, {_id:1, host:"192.168.192.105:30002"}, {_id:2, host:"192.168.192.105:30003", arbiterOnly: true}]}
 > rs.initiate(config)
 ```
 
@@ -61,13 +61,13 @@ MongoDB 的分片主要包含: mongos、config server、shard 和 replica set。
 用同样的方式配置好副本集 s2：
 
 ```
-./bin/mongod --shardsvr --port 40001 --dbpath ./s240001 --replSet s1
-./bin/mongod --shardsvr --port 40002 --dbpath ./s240002 --replSet s1
-./bin/mongod --shardsvr --port 40003 --dbpath ./s240003 --replSet s1
+./bin/mongod --shardsvr --port 40001 --dbpath ./s240001 --replSet s2
+./bin/mongod --shardsvr --port 40002 --dbpath ./s240002 --replSet s2
+./bin/mongod --shardsvr --port 40003 --dbpath ./s240003 --replSet s2
 ```
 
 ```
-> var config = {_id:"s2", members:[{_id:0, host:"192.168.192.105:40001"}, {_id:0, host:"192.168.192.105:40002"}, {_id:0, host:"192.168.192.105:40003", arbiterOnly: true}]}
+> var config = {_id:"s2", members:[{_id:0, host:"192.168.192.105:40001"}, {_id:2, host:"192.168.192.105:40002"}, {_id:3, host:"192.168.192.105:40003", arbiterOnly: true}]}
 > rs.initiate(config)
 ```
 
@@ -90,7 +90,7 @@ Config Server 也需要搭建为副本集的形式(我用的 3.2.8 是必须这�
 连接上 50001 进行副本集配置：
 
 ```
-> var config = {_id:"cs", members:[{_id:0, host:"192.168.192.105:50001"}, {_id:0, host:"192.168.192.105:50002"}, {_id:0, host:"192.168.192.105:50003"}]}
+> var config = {_id:"cs", members:[{_id:0, host:"192.168.192.105:50001"}, {_id:1, host:"192.168.192.105:50002"}, {_id:2, host:"192.168.192.105:50003"}]}
 > rs.initiate(config)
 ```
 
@@ -106,7 +106,7 @@ Config Server 也需要搭建为副本集的形式(我用的 3.2.8 是必须这�
 
 注意 --configdb 参数的格式为: 副本集名字/ip:port[,ip:port]。
 
-如果前面的 Config Server 搭建成功，那么这里将正常启动 Mongos。
+如果看到控制台输出 ```config servers and shards contacted successfully```，那说明一切正常。
 
 连接上 Mongos：
 
@@ -117,15 +117,16 @@ Config Server 也需要搭建为副本集的形式(我用的 3.2.8 是必须这�
 添加分片：
 
 ```
-> sh.addShard("s1/:192.168.192.105:300001") # 只需要添加主节点的 IP 和端口就好。
-> sh.addShard("s2/:192.168.192.105:400001")
+> sh.addShard("s1/192.168.192.105:30001") # 只需要添加主节点的 IP 和端口就好。
+> sh.addShard("s2/192.168.192.105:40001")
+> sh.status() #查看分片信息
 ```
 
 对数据库开启分片：
 
 ```
 > sh.enableSharding("mydb") #首先对数据库启用分片
-> sh.shardCollection("mydb.c1", {"_id": 1}) #再对集合进行分片，name字段是片键。片键的选择：利于分块、分散写请求、查询数据。
+> sh.shardCollection("mydb.c1", {"name": 1}) #再对集合进行分片，name字段是片键。片键的选择：利于分块、分散写请求、查询数据。
 > sh.status() #查看分片信息
 ```
 
