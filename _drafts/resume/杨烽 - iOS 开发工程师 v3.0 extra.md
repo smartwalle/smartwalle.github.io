@@ -1,8 +1,10 @@
 ## 杨烽 的个人简历
+
 Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 
 
 ## 基本信息
+
 * 杨烽 / 男 / 1988
 * 大专 / 计算机网络 / 成都大学
 * 互联网从业时间: 2009年12月 ～ 至今
@@ -12,6 +14,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 ---
 
 ## 联系方式
+
 * 手机号码: <a href="tel:18180103029">181 8010 3029</a>
 * 电子邮箱: <smartwalle@gmail.com>、 <smartwalle@live.cn> <font color=gray>(备用)</font>
 * QQ号码:	<a target=blank href="tencent://message/?uin=917996695">917996695</a>
@@ -19,25 +22,28 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 ---
 
 ## 工作经历
+
 ### 深圳市艾维普思科技股份有限公司 (SMOK) (2014.03 ~ 至今)
+
+#### Vaping Tour (原 Smart BEC, 国内叫做蒸汽时光)
+
+> 特别说明：由于公司发展策略，将 App 分为国内市场和国外市场，目前国内市场处于废弃状态，App 上没有数据，所以您在打开 App 之前，建议将手机首选语言切换为英语，以连接国外服务器，获得更好的体验。
+
+> **项目介绍:** Vaping Tour 最开始是一款和蓝牙电子烟进行交互的 App，该 App 通过蓝牙4.0与电子烟进行通信，主要包含设置电子烟的工作参数、电子烟吸烟数据采集、吸烟健康管理、电子烟固件更新等等。
+> 
+> 往后发展，加入了社交模块，使其成为了一个电子烟领域的垂直社交应用。社交模块包含话题、即时通信、电子烟评测等功能。
+> 
+> 服务器端采用 Golang 进行开发，数据库采用的是 MongoDB。含有用户、话题、电子烟设备、展示位、活动、分类、评测、投票等等功能。
+
+> **责任描述:** 项目第一期负责 App 产品设计、需求设计和 iOS 端所有的开发工作。项目第二期主要负责服务器端接口开发、iOS 端开发和团队建设管理工作。
+
+> **下载地址:** [Vaping Tour (Smart BEC)](https://itunes.apple.com/cn/app/smart-bec/id854309054?l=en&mt=8)
+
 #### SMOK Store App & KOOPOR Store App
 
 > **项目介绍:** SMOK Store (KOOPOR Store) 是深圳艾维普思旗下的一款销售电子烟的垂直电子商务平台，目前只上线了 KOOPOR Store, 其主要负责销售 KOOPOR 系列产品. 除了电子商务模块，KOOPOR Store 还集成了社交模块，供用户进行产品交流、心得分享等。
 
-> **责任描述:** 在该项目中，主要负责 iOS 端开发框架的搭建，实现了商品分类列表、商品列表、商品详细页面的 UI 部分。其次，负责解决在 iOS 端开发中遇到的技术问题。
-
-> **下载地址:** [KOOPOR](https://itunes.apple.com/us/app/koopor/id1033104936?l=zh&ls=1&mt=8)
-
-#### SMOK Social & KOOPOR Social
-> **项目介绍:** SMOK Social 是一套类似于微博的社交平台，该平台目前主要包含用户和话题两个部分，用户模块实现了用户注册、登录 (登录支持 Facebook、Twitter、新浪微博)、用户关系等相关内容，邮件发送采用搜狐的 [SendCloud](http://sendcloud.sohu.com/) 服务。话题模块实现了发话题、发评论等功能。除了基本功能开发外，还写了从原平台迁移数据和上传视频到 Youtube 平台的脚本程序。
-
-> **责任描述:** 负责后台开发框架搭建、数据库设计和全部的代码编写工作。
-
-#### Smart BEC
-
-> **项目介绍:** Smart BEC是针对蓝牙电子烟推出的一款App，该App通过蓝牙4.0与电子烟进行通信。App可以设置电子烟的工作模式，可以设定电子烟以恒电压、恒功率、自定义电压、自定义功率和机械模式进行输出。除了设置电子烟的工作模式之外，App还可以实时监测电子烟的输出数据，在界面上展示实时电压、功率、电阻、温度、电量等信息，把电子烟的输出电压和功率以图表的形式呈现给用户。
-
-> **责任描述:** 负责 App 产品设计、需求设计和 iOS 端所有的开发工作。后来团队扩建了之后，一并负责团队的管理工作。项目上线之后，兼职客服服务，回答、解决客户在使用过程中遇到的问题。
+> **责任描述:** 在该项目中，主要负责 iOS 端开发框架的搭建和服务器端的全部开发工作，实现了商品分类列表、商品列表、商品详细页面的 UI 部分。其次，负责解决在 iOS 端开发中遇到的技术问题。
 
 > **下载地址:** [Smart BEC](https://itunes.apple.com/cn/app/smart-bec/id854309054?l=en&mt=8)
 
@@ -105,6 +111,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** [乐拼](https://itunes.apple.com/cn/app/le-pin/id522990652?l=en&mt=8)
 
 #### 声行漫步电子杂志系列 (iPad)
+
 > **项目介绍:**《声行漫步电子杂志系列》是一套有声电子杂志解决方案。对《爱谱数字电子出版平台》进行了重新的规划。在该产品线上现在主要有《声行漫步成都》、《声行漫步巴黎》。与此同时，还开发了一个Mac平台下的杂志包制作工具，让设计人员可以添加一些多媒体交互功能。由于资源包比较大，所以将其托放在DBank上，通过DBank提供的API进行下载。
 
 > **责任描述:** 负责 iOS 端所有的编码、测试工作。
@@ -112,6 +119,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** [声行漫步-成都](https://itunes.apple.com/ro/app/sheng-xing-man-bu-cheng-dou/id520737309?mt=8)、 [声行漫步-安仁](https://itunes.apple.com/ro/app/sheng-xing-man-bu-an-ren/id543499550?mt=8) 、[声行漫步-巴黎(上)](https://itunes.apple.com/ro/app/sheng-xing-man-bu-ba-li-shang/id538304998?mt=8)
 
 #### 有声电子书 - 香巴拉秘符
+
 > **项目介绍:** 本项目是成都中启文化传媒有限公司合作推出的一款有声电子小说 App，我们负责软件研发，成都中启文化传媒有限公司负责提供相关的资源。
 
 > **责任描述:** 负责 iOS 端所有的编码、测试工作。
@@ -119,6 +127,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** [香巴拉秘符](https://itunes.apple.com/ro/app/xiang-ba-la-mi-fu/id514238246?mt=8)
 
 #### 爱谱数字电子出版平台 (iPad)
+
 > **项目介绍:** 爱谱数字电子出版平台提供了一整套数字电子出版的解决方案，为iPad上杂志的阅读添加了丰富的交互功能，比如：链接到网页，图片全屏，邮件反馈，音视频播放，滚动图片切换等。在这个平台上主要有《知乎周刊》、《云端新华航空》、《时尚偶像》、《人大传声》几个App。
 
 > **责任描述:** 负责 iOS 端所有的编码、测试工作。
@@ -126,6 +135,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** 暂无 (由于投资人对公司运营方向的转变，导致该项目最后停止运营)
 
 #### 知乎周刊
+
 > **项目介绍:** 本产品是和[知乎网](http://www.zhihu.com)战略合作开发的一款 iPad 阅读App。我们负责产品的研发及运营，知乎授权我们从知乎网上获取最新、最热的问答资讯，将相关内容进行重新编排设计，制作成为精美的“杂志周刊”，供用户下载阅读。本项目即为“爱谱数字电子出版平台”的前身。
 
 > **责任描述:** 负责 iOS 端所有的编码、测试工作。
@@ -133,6 +143,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** 暂无 (由于投资人对公司运营方向的转变，导致该项目最后停止运营，在[这里](http://www.zhihu.com/people/smartwalle/topic/19650575/answers)可以证明该产品曾经存在过)
 
 #### 同窗
+
 > **项目介绍:** 同窗产品为圈圈产品线的一个产出物。圈圈为基于本地联系人的实名制移动平台沟通软件。用户可以根据手机通信录邀请其他用户使用本软件，创建圈子（群组），邀请注册以后可以进行应用内联系。圈圈产品线的目标是开发面向不同用户群的不同产品，方便不同的人群进行交流。
 
 > **责任描述:** 负责 iOS 端所有的编码、测试工作。
@@ -140,11 +151,13 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** 暂无 (由于投资人对公司运营方向的转变，导致该项目最后停止运营)
 
 #### GasPower 天然气综合管理系统
+
 > **项目介绍:** GasPower是剑齿虎科技开发的一款基于J2EE和AIR的天然气收费管理系统。其中包括气表、用户管理，气表上量，气表收费，收费统计，工程管理，财务分析等功能。
 
 > **责任描述:** 负责产品设计和AIR客户端所有的编码、测试工作。
 
 #### TFARMS 会议室预约管理系统
+
 > **项目介绍:** 该项目是为东京某大型酒店开发的一款会议中心管理系统。系统完成会议室管理、预约、使用、付款、统计等功能。
 
 > **责任描述:** 负责产品设计和Flex客户端所有的编码、测试工作。
@@ -154,6 +167,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 <font color=gray>以下项目主要是在 “深圳市艾维普思科技股份有限公司” 工作期间，为兄弟公司做的项目。</font>
 
 #### Demgo LED
+
 > **项目介绍:** 本项目是 Kit4home 衍生出的一个项目，是针对客户需求进定制的一款 App。该 App 和 Kit4home 采用相同的技术，主要变更了 UI 设计和交互方式。
 
 > **责任描述:** 负责 iOS 端架构设计及所有的编码、测试工作。
@@ -161,6 +175,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** [Demgo LED](https://itunes.apple.com/cn/app/demgo-led/id944845645?l=en&mt=8)
 
 #### Kit4home
+
 > **项目介绍:** 该产品是一款通过网络控制LED灯的 App，同时支持局域网和互联网网控制。当手机和LED灯处于同一局域网内，App 通过 Socket 和 LED 灯进行通信；当手机和LED灯不在同一局域网的时候，App将指令发送到服务器端，由服务器将对应的指令中转给对应的LED灯。
 
 > **责任描述:** 负责 iOS 端架构设计及所有的编码、测试工作。
@@ -168,6 +183,7 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 > **下载地址:** [Kit4home](https://itunes.apple.com/cn/app/kit4home/id894448331?l=en&mt=8)
 
 #### Romant
+
 > **项目介绍:** Romant是针对女性情趣用品开发的App，也是通过蓝牙4.0与设备进行通信的。App通过向设备发送包含不同强度和频率的指令来控制设备的工作模式（包含：游戏模式、变频模式、声控模式、高潮模式等）。
 
 > **责任描述:** 负责 iOS 端架构设计及所有的编码、测试工作。
@@ -191,21 +207,25 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 <font color=gray>至于为什么做开源项目? 也是源自于自己从开源项目中受益颇丰，不管是学习还是项目开发，都从开源项目中学习到很多东西，所以还是决定自己也要贡献一点力量，推动开源社区的发展。虽然我现在的能力有限，开源出来的项目还有很多缺陷，但是只要坚持做下去，对自己来说，也是一种进步。</font>
 
 #### KIKeyChain
+
 > **项目介绍:** [点击查看详细介绍](https://github.com/smartwalle/KIKeyChain)
 
 > **项目地址:** [https://github.com/smartwalle/KIKeyChain](https://github.com/smartwalle/KIKeyChain)
 
 #### KIPageView
+
 > **项目介绍:** [点击查看详细介绍](https://github.com/smartwalle/KIPageView)
 
 > **项目地址:** [https://github.com/smartwalle/KIPageView](https://github.com/smartwalle/KIPageView)
 
 #### KICoreDataManager
+
 > **项目介绍:** [点击查看详细介绍](https://github.com/smartwalle/CoreDataSample)
 
 > **项目地址:** [https://github.com/smartwalle/CoreDataSample](https://github.com/smartwalle/CoreDataSample)
 
 #### Going
+
 > **项目介绍:** [点击查看详细介绍](https://github.com/smartwalle/going)
 
 > **项目地址:** [https://github.com/smartwalle/going](https://github.com/smartwalle/going)
@@ -214,16 +234,19 @@ Github: [http://github.com/smartwalle](http://github.com/smartwalle)
 ---
 
 ## 教育经历
+
 2008.09 ～ 2010.07 成都大学 计算机网络专业
 
 ---
 
 ## 自我评价
+
 2009年参加工作，从事 Flex 开发。从2011年开始接触 iOS 应用开发，能够独立完成 App 的开发，有多款成功上线的应用，拥有比较丰富的移动应用开发经验。日常接触的事情主要包括与客户沟通、需求整理、功能梳理、原型图、开发团队管理以及编码。为人比较随和，有很强的自制能力，能够自我驱动进行工作、学习。有较强的团队意识，能够与团队成员共同努力，出色地完成任务。目前主要投身于 iOS 和 Golang 开发。
 
 ---
 
 ## 专业技能
+
 * 熟练掌握 Objective-c 开发语言、iOS SDK, 能够快速进行 iOS App 的开发及发布。
 * 熟练使用 iOS 开发工具 Xcode, 能够使用代码或者 Interface Builder 进行页面布局，熟悉内存检测工具 Instruments 的使用。
 * 熟悉 iOS 平台上 BLE(Bluetooth low energy, 低功耗蓝牙) 开发，并有多款成功上线项目经验。
